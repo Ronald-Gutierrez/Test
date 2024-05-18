@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'obras/base.html' %}
+{% load static %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ obra.nombre }}</title>
+</head>
+<body>
+
+<div class="title">
+    <div id="logo">
+    <img id="imgicono" src="{% static 'Imgicono.jpg'%}">
+    <h1>{{obra.nombre}}</h1>
+    </div>
+
+    <h6 id="acercade"><a href="{% url 'inicio'%}">Volver a inicio</a></h6>
+
+</div>
+
+<div id="detalleimg">
+    <p>{{ obra.descripcion }}</p>
+    {% for imagen in obra.imagenes.all %}
+        <img id="imgdetalle" src="{{ imagen.imagen.url }}" class="img-fluid" alt="{{ obra.nombre }} - Imagen">
+    {% endfor %}
+</div>
+<div class="iconos">
+   <div class="txtico">
+     <p>Visítanos en </p>
+   </div>
+   <a href="https://www.facebook.com/profile.php?id=100042638030438&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+   <div class="txtico">
+        <p>O contáctanos:  </p>
+    </div>
+    <a href="https://wa.me/527821127677?text=Hola quiero información de las obras" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #13CB11;"></i></a>
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Icono-->
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Font Awsome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <!---Stylesheet-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <style>
+        @media (min-width: 200px) and (max-width:485px){
+           #container-acercade{
+            padding: 1em;
+         }
+           #carrusel-rieles img{
+            border-radius: 5%;
+            }
+           #carrusel-bimba img{
+            border-radius: 5%;
+            }
+           #carrusel-aurora img{
+            border-radius: 5%;
+            }
+           #detalleimg{
+            text-align:center;
+            }
+           #detalleimg img{
+            border-radius: 5%;
+            margin: 2rem;
+           }
+        }
+        @media (min-width: 486px) and (max-width:1500px){
+           #container-acercade{
+            padding: 1em;
+            }
+            #carrusel-rieles{
+             max-width:300px;
+             max-height:450x;
+             margin: auto;
+             margin-top: 2rem;
+            }
+            #carrusel-rieles img{
+             max-height: 300px;
+             max-width: 350px;
+             border-radius: 5%;
+            }
+            #carrusel-bimba{
+             max-width:400px;
+             max-height:600px;
+             margin: auto;
+             margin-top: 2rem;
+             margin-bottom: 2rem;
+            }
+            #carrusel-bimba img{
+             max-height: 300px;
+             max-width: 350px;
+             border-radius: 5%;
+            }
+            #carrusel-aurora{
+             max-width:400px;
+             max-height:600px;
+             margin: auto;
+             margin-top: 2rem;
+             margin-bottom: 2rem;
+            }
+            #carrusel-aurora img{
+             max-height: 300px;
+             max-width: 350px;
+             border-radius: 5%;
+            }
+            #detalleimg img{
+             border-radius: 5%;
+             margin: 2rem;
+           }
+        }
+        body{
+        background-color:#F5E171;
+        font-family: 'Rowdies', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        }
+         .title{
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         background-color: black;
+         padding: 1rem;
+         font-family: 'Black Ops One', system-ui;
+         color: white;
+         }
+         .title #logo{
+         display: flex;
+         width:70%
+         }
+         .title #imgicono {
+         width:4rem;
+         height: 4rem;
+         border-radius: 50%;
+         margin-right: 6px;
+        }
+        .title #acercade {
+        width: 30%;
+        text-align: right;
+        }
+
+       .title a{
+       text-decoration: none;
+       color: white;
+       font-family: 'Rowdies', sans-serif;
+       }
+       #buscador {
+       padding: 1rem;
+       }
+       #caja_buscador{
+       border: 2px solid #E7C714;
+       border-radius: 5px;
+       }
+       #boton_buscador{
+       border: 2px solid #E7C714;
+       border-radius: 5px;
+       }
+       .container{
+        display:flex;
+        flex-wrap:wrap;
+        }
+        .container a {
+        text-decoration: none;
+        color:black;
+        margin:1rem;
+        }
+        .card{
+        border: 2px solid #F6E585;
+        box-shadow: 0px 1px 5px #383835;
+        -webkit-box-shadow: 0px 1px 5px #383835;
+        -moz-box-shadow: 0px 1px 5px #383835;
+        }
+        .iconos {
+        display: flex;
+        flex-wrap:wrap;
+        margin-top: auto;
+        background-color: black;
+        color: white;
+        padding-top: 0.3rem;
+        width: 100%;
+        }
+        .txtico{
+        text-align: center;
+        padding: 0.6rem;
+        }
+        .iconos a {
+        text-decoration: none;
+        font-size: 28px;
+        width: 60px;
+        height: 60px;
+        transition: all 0.4s ease-in-out;
+        }
+        @media (hover:hover) {
+        .iconos a:hover {
+        transform: scale(1.2);
+         }
+
+
+         #container-acercade{
+         padding: 1rem;
+         width: 100%;
+         font-size: 22px;
+         }
+         #carrusel-rieles{
+         max-width:400px;
+         max-height:600px;
+         margin: auto;
+         margin-top: 2rem;
+        }
+        #carrusel-rieles img{
+         max-height: 300px;
+         max-width: 350px;
+         border-radius: 5%;
+        }
+         #carrusel-bimba{
+         max-width:400px;
+         max-height:600px;
+         margin: auto;
+         margin-top: 2rem;
+        }
+        #carrusel-bimba img{
+         max-height: 300px;
+         max-width: 350px;
+         border-radius: 5%;
+        }
+         #carrusel-aurora{
+         max-width:400px;
+         max-height:600px;
+         margin: auto;
+         margin-top: 2rem;
+        }
+        #carrusel-aurora img{
+         max-height: 350px;
+         max-width: 350px;
+         border-radius: 5%;
+        }
+
+        #detalleimg p{
+        margin: 1.5em;
+        }
+
+        #imgdetalle {
+        margin:auto;
+        margin: 1rem;
+        border-radius: 1.5rem;
+        box-shadow: 5px 5px 5px #383835;
+        -moz-box-shadow: 5px 5px 5px #383835;
+        -webkit-box-shadow: 5px 5px 5px #383835;
+        }
+
+    </style>
+    <title>Arte en Hierro</title>
+</head>
+
+<body>
+{% block body %}
+{% endblock %}
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>

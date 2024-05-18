@@ -1,0 +1,92 @@
+{% extends 'obras/base.html' %}
+{% load static %}
+{% block body %}
+<div class="title">
+    <div id="logo">
+    <img id="imgicono" src="{% static 'Imgicono.jpg'%}">
+    <h1>Acerca del trabajo del maestro</h1>
+    </div>
+    <h6 id="acercade"><a href="{% url 'inicio'%}">Volver al inicio</a></h6>
+</div>
+<div id="container-acercade">
+    <p>El maestro Manuel Guzmán ha desarrollado su talento como escultor de forma autodidacta,
+    a lo largo de los años ha perfeccionado su técnica de hierro en frío, reciclando cualquier pieza
+    de hierro para crear sus obras que se inspiran en animales del campo como gallos, caballos, elefantes;
+    en instrumentos musicales, personajes de literatura como el quijote de la mancha...
+    y un gran número de diseños hechos con gran creatividad e ingenio.
+    Ha presentado su trabajo en expos colectivos artesanales y festivales de calidad.</p>
+    <p>Ejerce su oficio en su taller en Poza Rica de Hidalgo, y entre sus obras en la ciudad destacan:</p>
+    <h3><strong><i>Restauración vías de tren</i></strong></h3>
+    <div id="carrusel-rieles" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="static/rieles1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="static/rieles2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="static/rieles3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+
+    <p style="padding:1.5rem;">Antes de existir Poza Rica como población había paradas a lo largo de los 82 kilómetros de vía angosta de los cuales nacerían algunos poblados como el kilómetro 52,
+        origen de la colonia Manuel Ávila Camacho y el kilómetro 56 que a la postre sería la colonia Obrera.
+        El fragmento de vía fue construido hace aproximadamente un siglo y forma parte del trayecto de la maquinita Cobos- Furbero;
+        por años era la única via de comunicación entre Tuxpan, Papantla, Cazones y Coatzintla
+        y en ella se transportaba todo lo derviado al crecimiento de la industria petrolera, pero a su vez, era un medio de transporte para los habitantes de estos municipios.
+        La parada obligatoria que tenía esta en Poza Rica en el kilómetro 52, permitió un rápido desarrollo de este sector y pasaba por lo que hoy es el boulevard Adolfo Ruiz Cortines.
+    </p>
+    <hr>
+    <h3><strong><i>Representación de bomba de petróleo en el museo de la ciudad</i></strong></h3>
+    <div id="carrusel-bimba" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="static/bimba1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="static/bimba2.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+    <p>
+        Poza Rica surgió en 1932 como un campo y campamento de petroleros. De ahí, la historia de la ciudad ha estado estrechamente
+        ligada a dicho recurso natural: El petróleo.
+        Hay cientos de bombas de petróleo en la ciudad y estas, se han convertido en un símbolo de la misma.
+        Esta obra es una donación del maestro Manuel Guzmán y se encuentra en el museo de Poza Rica de Hidalgo.
+    </p>
+    <hr>
+    <h3><strong><i>Su trabajo en San Miguel de Allende</i></strong></h3>
+    <div id="carrusel-aurora" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="static/aurora1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="static/aurora2.jpg" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="carousel-item">
+          <img src="static/aurora4.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+    <p>
+        Las galería Aller es un centro de arte contemporáneo que se encuentra en San Miguel de Allende, Guanajuato. Es una de las salas
+        de arte y diseño ubicada en lo que antes era la fábrica textil la Aurora. Aquí se puede apreciar el trabajo de artistas extranjeros
+        y también de México como el del artista Manuel Guzmán.
+    </p>
+</div>
+<div class="iconos">
+    <div class="txtico">
+        <p>Visítanos en </p>
+    </div>
+    <a href="https://www.facebook.com/profile.php?id=100042638030438&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <div class="txtico">
+        <p>O contáctanos:  </p>
+    </div>
+    <a href="https://wa.me/527821127677?text=Hola quiero información de las obras" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #13CB11;"></i></a>
+</div>
+{% endblock %}

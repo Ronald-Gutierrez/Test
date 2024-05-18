@@ -1,0 +1,63 @@
+{% extends 'obras/base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="title">
+    <div id="logo">
+    <img id="imgicono" src="{% static 'Imgicono.jpg'%}">
+    <h1>OBRAS</h1>
+    </div>
+
+    <h6 id="acercade"><a href="{% url 'autor'%}">Acerca del trabajo del maestro</a></h6>
+
+</div>
+
+    <h5 style="margin: 1rem;">Estas obras de arte pertenecen al maestro Manuel Guzmán y son piezas hechas de hierro recilado;
+    están clasificadas de acuerdo a su nombre y forma:</h5>
+    <div id="buscador">
+        <form method="GET">
+            <input id="caja_buscador" type="text" name="buscador" placeholder="Buscar..." value="{{request.GET.buscador}}">
+            <input id="boton_buscador" type="submit" value="Buscar">
+        </form>
+        {% if mensaje %}
+        <p style="margin-top:0.5rem; font-size:2rem;"><strong>{{ mensaje }}</strong></p>
+        {% endif %}
+    </div>
+
+<div class="container">
+    {% for obra in obras %}
+    <a href="{% url 'detalle' obra.id %}">
+    <div class="card" style="width: 17rem; height: 35em">
+        <img src="{{ obra.imagen.url }}" class="card-img-top" alt="..." style="height:26rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ obra.nombre }}</h5>
+            <p>Haz click para ver todas las obras de {{obra.nombre}} </p>
+        </div>
+    </div>
+    </a>
+    {% endfor %}
+</div>
+<div class="iconos">
+   <div class="txtico">
+     <p>Visítanos en </p>
+   </div>
+   <a href="https://www.facebook.com/profile.php?id=100042638030438&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+   <div class="txtico">
+        <p>O contáctanos:  </p>
+    </div>
+    <a href="https://wa.me/527821127677?text=Hola quiero información de las obras" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #13CB11;"></i></a>
+
+</div>
+{% endblock %}
+
+
+<!---
+    <h1>Obras</h1>
+    {% for obra in obras %}
+        <div>
+            <h2><a href="{% url 'detalle' obra.id %}">{{ obra.nombre }}</a></h2>
+            <p>{{ obra.descripcion }}</p>
+            <img src="{{ obra.imagen.url }}" alt="{{ obra.nombre }} - Imagen">
+        </div>
+    {% endfor %}
+--->
